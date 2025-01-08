@@ -1,0 +1,15 @@
+{
+    "apiProducts": [
+      {
+        "name": "ProductB",
+        "displayName": "Product B",
+        "environments": ["${apigee.env}"],
+        "proxies": ["proxyB"],
+        "approvalType": "manual",
+        "quota": "200",
+        "quotaInterval": "1",
+        "quotaTimeUnit": "day"
+      }
+    ]
+  }
+  

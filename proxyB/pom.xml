@@ -1,0 +1,45 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example.apigee</groupId>
+    <artifactId>multi-proxy-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>proxyB</artifactId>
+  <packaging>pom</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.apigee.build-tools.enterprise4g</groupId>
+        <artifactId>apigee-edge-maven-plugin</artifactId>
+        <version>2.2.1</version>
+        <configuration>
+          <orgName>${apigee.org}</orgName>
+          <envName>${apigee.env}</envName>
+          <bearerToken>${apigee.bearerToken}</bearerToken>
+          <baseDirectory>apiproxy</baseDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy-proxy</id>
+            <phase>install</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>deploy-products</id>
+            <phase>install</phase>
+            <goals>
+              <goal>apiproducts</goal>
+            </goals>
+            <configuration>
+              <configDir>config/api_products_B.json</configDir>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

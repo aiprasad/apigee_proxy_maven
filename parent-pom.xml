@@ -1,0 +1,18 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example.apigee</groupId>
+  <artifactId>multi-proxy-parent</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>proxyA</module>
+    <module>proxyB</module>
+  </modules>
+
+  <properties>
+    <apigee.org>my-org</apigee.org>
+    <apigee.env>test</apigee.env>
+    <apigee.bearerToken>${env.APIGEE_BEARER_TOKEN}</apigee.bearerToken>
+  </properties>
+</project>

@@ -1,0 +1,14 @@
+<TargetEndpoint name="default">
+  <PreFlow>
+    <Request/>
+    <Response/>
+  </PreFlow>
+  <Flows/>
+  <PostFlow>
+    <Request/>
+    <Response/>
+  </PostFlow>
+  <HTTPTargetConnection>
+    <URL>https://example-backend.com</URL>
+  </HTTPTargetConnection>
+</TargetEndpoint>
